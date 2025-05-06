@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-repo/simple-java-app.git'
+                git credentialsId: 'github-creds', url: 'https://github.com/redbond/simple-java-app.git'
             }
         }
 
